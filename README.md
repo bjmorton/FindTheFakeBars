@@ -24,7 +24,21 @@ FindFakeBars/
 │                   └── FindFakeGoldBarSteps.java
 └── pom.xml
 
-Dependencies
+--Installation--
+To set up the project locally:
+
+1. **Clone the repository**:
+   Execute the following command in the terminal to clone the repository:
+   git clone https://github.com/bjmorton/FindTheFakeBars.git
+
+2. **Navigate to the project directory**:
+   Execute the following command in the terminal to navigate to the project directory:
+   cd FindFakeBars
+
+4. **Install the dependencies**:
+   Maven will automatically download the required dependencies when you run the tests or build the project.
+
+--Dependencies--
 The project uses the following dependencies:
 
 Selenium Java: org.seleniumhq.selenium:selenium-java:4.18.1
@@ -37,7 +51,7 @@ Reporting Plugin: me.jvt.cucumber:reporting-plugin:7.3.0
 Please note: The default browser for this test is Chrome. Ensure you have Google Chrome OR firefox installed in order to run this test.
 If you wish to change the browser type for this test, simply navigate to the configuration.properties file and replace 'chrome' with 'firefox'.
 
-To run the tests, execute the following command in the project root directory:
+To run the tests, execute the following command in the project root directory (terminal):
 mvn test
 
 The tests will be executed using the Cucumber JUnit runner (CukesRunner.java).
