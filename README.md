@@ -5,24 +5,31 @@ The framework is designed to use the scale tool provided and isolate the "fake g
 Project Structure
 FindFakeBars/
 ├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/brian/findfakebars/
-│   │   │       └── App.java
-│   │   └── test/
-│   │       ├── java/
-│   │       │   └── com/brian/findfakebars/
-│   │       │       └── stepdefs/
-│   │       │           └── CukesRunner.java
-│   │       └── resources/
-│   │           └── features/
-│   │               └── find_fake_gold_bar.feature
-│   └── test/
-│       └── java/
-│           └── com/brian/findfakebars/
-│               └── stepdefs/
-│                   └── FindFakeGoldBarSteps.java
-└── pom.xml
+│    │ 
+│    └── test/
+│       ├── java/
+│       │   └── com/brian/
+│       │            |    
+|       |            ├── pages/
+|       |            |     └── BalanceScalePage.java
+|       |            |
+|       |            ├── runners/
+|       |            |     └── CukesRunner.java
+|       |            |     └── FailedTestRunner .java
+|       |            | 
+|       |            ├── step_defs/
+|       |            |     └──Scale_StepDefinitions.java
+|       |            | 
+|       |            └── utilities/
+|       |                  └── Driver.java
+|       |            
+│       └── resources/
+│             └── features/
+│                 └── find_fake_gold_bar.feature
+│ 
+├── configuration.properties
+├── pom.xml
+└── target/
 
 --Installation--
 To set up the project locally:
