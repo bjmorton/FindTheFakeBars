@@ -1,9 +1,9 @@
---FindFakeBars--
+--FindFakeBar--
 This is a test automation framework using Java, Selenium, and Cucumber for BDD (Behavior-Driven Development).
 The framework is designed to use the scale tool provided and isolate the "fake gold bar" that weighs less than its "real" counterparts.
 
 Project Structure
-FindFakeBars/
+FindFakeBar/
 ├── src/
 │    │ 
 │    └── test/
@@ -14,18 +14,18 @@ FindFakeBars/
 |       |            |     └── BalanceScalePage.java
 |       |            |
 |       |            ├── runners/
-|       |            |     └── CukesRunner.java
+|       |            |     ├── CukesRunner.java
 |       |            |     └── FailedTestRunner .java
 |       |            | 
 |       |            ├── step_defs/
 |       |            |     └──Scale_StepDefinitions.java
 |       |            | 
 |       |            └── utilities/
-|       |                  └── Driver.java
-|       |            
+|       |                  ├── Driver.java
+|       |                  └── ConfigurationReader.java
 │       └── resources/
 │             └── features/
-│                 └── find_fake_gold_bar.feature
+│                 └── FakeFinder.feature
 │ 
 ├── configuration.properties
 ├── pom.xml
