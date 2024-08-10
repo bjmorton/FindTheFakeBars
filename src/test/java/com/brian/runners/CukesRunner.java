@@ -15,6 +15,6 @@ import org.junit.runner.RunWith;
         glue = "com/brian/step_defs",
         dryRun = false,
         tags = "@FakeFinder",
-        publish = true //generating a report with public link
+        publish = true //generates a report in the console with public link
 )
 public class CukesRunner {}

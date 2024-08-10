@@ -19,8 +19,6 @@ public class Scale_StepDefinitions {
 
     private BalanceScalePage balanceScalePage;
 
-
-
     public Scale_StepDefinitions() {
         this.balanceScalePage = new BalanceScalePage();
     }
@@ -32,7 +30,7 @@ public class Scale_StepDefinitions {
 
     @When("I weigh the gold bars to find the fake one")
     public void i_weigh_the_gold_bars_to_find_the_fake_one() throws InterruptedException {
-        Thread.sleep(3000);
+
         int fakeBar = findFakeBar(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8});
         balanceScalePage.clickOnBar(fakeBar);
     }
@@ -70,7 +68,6 @@ public class Scale_StepDefinitions {
         balanceScalePage.enterNumbersInLeftBowl(group1);
         balanceScalePage.enterNumbersInRightBowl(group2);
         balanceScalePage.clickWeighButton();
-      //  Thread.sleep(3000);
 
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".game-info ol li")));
@@ -92,7 +89,6 @@ public class Scale_StepDefinitions {
 
     @Then("I should see the alert with the message {string}")
     public void i_should_see_the_alert_with_the_message(String expectedMessage) throws InterruptedException {
-        Thread.sleep(3000);
 
         String actualMessage = balanceScalePage.getAlertMessage();
         assertEquals(expectedMessage, actualMessage);
@@ -100,7 +96,6 @@ public class Scale_StepDefinitions {
 
     @Then("I should see the list of weighings")
     public void i_should_see_the_list_of_weighings() throws InterruptedException {
-        Thread.sleep(3000);
 
         List<String> weighings = balanceScalePage.getWeighings();
         assertTrue("Weighings list should not be empty", !weighings.isEmpty());
